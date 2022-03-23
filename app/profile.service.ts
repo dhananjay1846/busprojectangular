@@ -23,7 +23,12 @@ export class ProfileService {
   
   updateProfile(upfe:Profile)
   {
-    return this.myhttp.post(this.restUrl+"/profile",upfe)
+    return this.myhttp.put(this.restUrl+"/profile",upfe)
+  }
+
+  findProfile(pid:string)
+  {
+    return this.myhttp.get(this.restUrl+"/profile/"+pid)
   }
 }
 
